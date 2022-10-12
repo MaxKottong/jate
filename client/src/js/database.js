@@ -1,6 +1,7 @@
 import { openDB } from 'idb';
+import 'regenerator-runtime/runtime';
 
-const initdb = async () =>
+export const initdb = async () =>
     openDB('jate', 1, {
         upgrade(db) {
             if (db.objectStoreNames.contains('jate')) {
@@ -18,10 +19,10 @@ export const putDb = async (content) => {
 
     const tx = db.transaction('jate', 'readwrite');
     const store = tx.objectStore('jate');
-    const request = store.put(content, 1);
+    const request = store.put({ content: content });
     const result = await request;
 
-    console.log('IndexDB has been updated')
+    console.log('IndexDB has been updated', result)
 }
 
 // TODO: Add logic for a method that gets all the content from the database
