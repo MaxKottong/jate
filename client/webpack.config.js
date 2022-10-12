@@ -33,6 +33,8 @@ module.exports = () => {
                 publicPath: './',
                 orientation: 'portrait',
                 display: 'standalone',
+                inject: true,
+                fingerprints: true,
                 icons: [
                     {
                         src: path.resolve('src/images/logo.png'),
