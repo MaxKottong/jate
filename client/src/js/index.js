@@ -1,10 +1,7 @@
 import { Workbox } from 'workbox-window';
 import Editor from './editor';
 import '../css/style.css';
-
-import Logo from '../images/logo.png';
-
-import { initdb, getDb, putDb } from './database';
+import './database';
 
 const main = document.querySelector('#main');
 main.innerHTML = '';
@@ -34,8 +31,3 @@ if ('serviceWorker' in navigator) {
 } else {
   console.error('Service workers are not supported in this browser.');
 }
-
-window.addEventListener('load', function () {
-    initdb();
-    document.getElementById('logo').src = Logo;
-})
