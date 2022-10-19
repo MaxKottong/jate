@@ -14,5 +14,7 @@ Built as a Progressive Web App (PWA), this app is a simple note taker, where you
 * Start the server with `npm start`
 * Take notes!
 
+![Site](./client/src/images/site.png)
+
 ## Links
 [Deployed App](http://radiant-spire-72294.herokuapp.com/)
