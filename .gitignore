@@ -13,7 +13,6 @@ obj
 .vs
 properties
 node_modules
-dist
 
 
 # User-specific files (MonoDevelop/Xamarin Studio)
